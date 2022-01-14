@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    $(document).ready(function () {
+      $('.container ul.toggle').click(function () {
+        $(this).toggleClass('active');
+        $('.container .sidebar').toggleClass('active');
+      })
+    })
+  </script>
+
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="menu">
+
+      <img src="assets\img\logo1.png" style="width: 12%;">
+
+    </div>
+
+    <!-- <div class="section"></div> -->
+
+    <!-- <div class="section"></div> -->
+
+    <ul class="toggle active">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="sidebar active">
+      <img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="social-icon">
+        <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
+        <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> </a> </li>
+        <li><a href="#"> <i class="fa fa-google-plus" aria-hidden="true"></i> </a> </li>
+        <li><a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> </li>
+        <li><a href="#"> <i class="fa fa-skype" aria-hidden="true"></i> </a> </li>
+      </ul>
+
+    </div>
+    <app-spacex></app-spacex>
+  </div>
+
+
+
+</body>
+
+</html>

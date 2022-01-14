@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+
+
+
+
+
+
+
+    <div class="launchpost"><h1 style="color:white; font-size: 40px;padding-left: 20px; font-family: 'Times New Roman', Times, serif;"> Launch DashBoard</h1>
+      <div class="head1">
+      <div class="head2"><h1 style="color: red;">{{past}} </h1>Past</div>
+      <div class="head2"><h1 style="color: red;">{{upcoming}}</h1>Upcoming</div>
+      <div class="head2"><h1 style="color: red;">{{past + upcoming}}</h1>Total</div>
+    </div>
+    </div>
+    <div *ngFor="let i of years">
+      <p value="getPrint(i)">{{i.launch_year}}</p>
+
+    </div>
+
+
+
+
+  <div class='barchart'>
+
+    <ngx-charts-bar-vertical [view]="[1500,400]" [results]="years" [xAxisLabel]="'Years'"
+      [legendTitle]="'Year Launch Chart'" [yAxisLabel]="'Count'" [legend]="true" [showXAxisLabel]="true"
+      [showYAxisLabel]="true" [xAxis]="100" [yAxis]="100" [gradient]="true">
+    </ngx-charts-bar-vertical>
+</div>
+<div class="linechart">
+    <ngx-charts-line-chart [view]="[700,400]" [legendTitle]="'Launch Timeline '" [legend]="true"
+      [showXAxisLabel]="false" [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel" [timeline]="true" [results]="timelineutc" (select)="onSelect($event)"
+      (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+    </ngx-charts-line-chart>
+
+  </div>
+  <div class="map">
+
+    <google-map [height]= "'300px'" [center]="{lng:long,lat:latt}">
+
+      <map-marker [position]="{lng:long,lat:latt}" [label]="{color:'red',text:name}"></map-marker>
+    </google-map>
+  </div>
+  </div>
+
+
+</body>
+
+</html>
